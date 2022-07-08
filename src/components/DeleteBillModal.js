@@ -10,7 +10,7 @@ const DeleteBillModal = ({ deleteBill, setDeleteBill, refetch }) => {
     const handleDeleteUser = async () => {
 
         try {
-            const { data } = await axios.delete(`http://localhost:5000/api/delete-billing/${deleteBill._id}`, {
+            const { data } = await axios.delete(`https://tranquil-waters-36432.herokuapp.com/api/delete-billing/${deleteBill._id}`, {
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('accessToken')}`
                 }

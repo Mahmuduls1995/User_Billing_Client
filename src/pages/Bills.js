@@ -26,11 +26,11 @@ const Bills = ({ setTotal }) => {
 
     // https://billing-system-1542.herokuapp.com/
 
-    // http://localhost:5000/
+    // https://tranquil-waters-36432.herokuapp.com/
 
 
     const getData = async () => {
-        const { data } = await axios.get('http://localhost:5000/api/billing-list', {
+        const { data } = await axios.get('https://tranquil-waters-36432.herokuapp.com/api/billing-list', {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
             }
@@ -138,7 +138,7 @@ const Bills = ({ setTotal }) => {
                 <p className="text-lg">Pages: </p>
                 <div className="btn-group ">
                     {
-                        [...Array(pageCount).keys()].map(number => <button  key={number} onClick={() => setPageNumber(number)}
+                        [...Array(pageCount).keys()].map(number => <button key={number} onClick={() => setPageNumber(number)}
                             className={pageNumber === number ? 'btn-active btn h-2' : 'btn'}>
 
                             {number + 1}

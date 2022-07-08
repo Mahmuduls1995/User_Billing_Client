@@ -19,7 +19,7 @@ const UpdateBillModal = ({ billInfo, setBillInfo, refetch }) => {
                 email: data.email,
                 paid_amount: data.amount
             }
-            const { data: response } = await axios.put(`http://localhost:5000/api/update-billing/${billInfo._id}`, bill, {
+            const { data: response } = await axios.put(`https://tranquil-waters-36432.herokuapp.com/api/update-billing/${billInfo._id}`, bill, {
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('accessToken')}`
                 }
