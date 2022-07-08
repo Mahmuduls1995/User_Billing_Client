@@ -24,11 +24,6 @@ const Bills = ({ setTotal }) => {
     const [addModal, setAddModal] = useState(false)
     const [search, setSearch] = useState('');
 
-    // https://billing-system-1542.herokuapp.com/
-
-    // https://tranquil-waters-36432.herokuapp.com/
-
-
     const getData = async () => {
         const { data } = await axios.get('https://tranquil-waters-36432.herokuapp.com/api/billing-list', {
             headers: {
